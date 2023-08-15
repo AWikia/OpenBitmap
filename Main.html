@@ -1,11 +1,43 @@
-<html>
-  <head>
+<html><head>
     <style>
-      @font-face {
+@font-face {
     font-family: OpenBitmap;
-    src:url('OpenBitmap.ttf') format('truetype');
+    font-weight:400;
+    font-stretch:condensed;
+    src:url('Νέα OpenBitmap/OpenBitmapCondensed-Regular.ttf') format('truetype');
 }
-* {
+@font-face {
+    font-family: OpenBitmap;
+    font-weight:400;
+    font-stretch:normal;
+    src:url('Νέα OpenBitmap/OpenBitmap-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: OpenBitmap;
+    font-weight:700;
+    font-stretch:condensed;
+    src:url('Νέα OpenBitmap/OpenBitmapCondensed-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: OpenBitmap;
+    font-weight:700;
+    font-stretch:normal;
+    src:url('Νέα OpenBitmap/OpenBitmap-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: OpenBitmap;
+    font-weight:900;
+    font-stretch:condensed;
+    src:url('Νέα OpenBitmap/OpenBitmapCondensed-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: OpenBitmap;
+    font-weight:900;
+    font-stretch:normal;
+    src:url('Νέα OpenBitmap/OpenBitmap-Black.ttf') format('truetype');
+}* {
   font-family:OpenBitmap, casual;
 }
       
@@ -43,6 +75,8 @@
         padding:0 0 10px;
         overflow-y:auto;
         caret-color:orange;
+        font-weight:var(--font-weight,400);
+        font-stretch:var(--font-stretch,normal);
       }
       textarea:focus {
         color:blue;
@@ -74,11 +108,21 @@
     <code>
 Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds. 
     </code>
+    <h3>Pick your Tone</h3>
+	<br>
+    <input type="radio" name="effects" id="eff01" onclick="document.querySelector('textarea').setAttribute('style','--font-weight:400;')"></input> <label for="eff01">Light</label>
+    <input type="radio" name="effects" id="eff02" onclick="document.querySelector('textarea').setAttribute('style','--font-weight:700;')"></input> <label for="eff02">Medium</label>
+    <input type="radio" name="effects" id="eff03" onclick="document.querySelector('textarea').setAttribute('style','--font-weight:900;')"></input> <label for="eff03">Dark</label>
+    <h3>Pick your Size</h3>
+	<br>
+    <input type="radio" name="effects" id="eff11" onclick="document.querySelector('textarea').setAttribute('style','--font-stretch:condensed;')"></input> <label for="eff11">Small</label>
+    <input type="radio" name="effects" id="eff12" onclick="document.querySelector('textarea').setAttribute('style','--font-stretch:normal;')"></input> <label for="eff12">Large</label>
+
     <h3>Test it</h3>
       Just write some text into the textarea to test it:
       <textarea placeholder="Write something here..."></textarea>
     <h3>Use it on your documents</h3>
       Just download the repository to your PC, find the OpenBitmap.ttf file and install it
      <h1 style="text-align:right">Powered by A Techno Services</h1>
-</body>
-</html>
+
+</body></html>
